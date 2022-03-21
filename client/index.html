@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ru-RU">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Юла</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+
+<body>
+
+    <main>
+        <div onclick="get()">123456</div>
+    </main>
+    <!--<script type="text/javascript" src="index.js"></script>-->
+    <script>
+        async function get() {
+            try {
+                const response = await fetch('http://localhost:5000/get-number-of-banknotes/10500', {method: 'GET'});
+                console.log(response.json())
+            } catch (error) {
+                console.error('Ошибка:', error);
+            }
+        }
+    </script>
+</body>
+
+</html>
