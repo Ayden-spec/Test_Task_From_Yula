@@ -12,7 +12,6 @@ router.get('/get-number-of-banknotes/:id', async (req, res) => {
                 500: 45,
                 200: 0,
                 100: 734
-
             }
         })
     } catch (e) {

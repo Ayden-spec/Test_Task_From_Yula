@@ -9,21 +9,21 @@
 </head>
 
 <body>
+    <header>
+        <p class="author">Power By Аминов А.А.</p>
+        <strong>Банкомат</strong>
+    </header>
 
     <main>
-        <div onclick="get()">123456</div>
+        <label class="terminal_input_label">
+            <p>Введите сумму</p>
+            <input  type="text" class="terminal_input">
+        </label>
+        <button class="teminal_button" onclick="get_data()">Рассчитать</button>
+        <div class="terminal_output"></div>
     </main>
-    <!--<script type="text/javascript" src="index.js"></script>-->
-    <script>
-        async function get() {
-            try {
-                const response = await fetch('http://localhost:5000/get-number-of-banknotes/10500', {method: 'GET'});
-                console.log(response.json())
-            } catch (error) {
-                console.error('Ошибка:', error);
-            }
-        }
-    </script>
+
+    <script type="text/javascript" src="index.js"></script>
 </body>
 
 </html>

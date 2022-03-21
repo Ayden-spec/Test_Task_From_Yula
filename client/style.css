@@ -1,0 +1,101 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #4e4e4e;
+}
+
+header{
+    position: relative;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px 0 20px 0;
+    border-bottom: solid 2px #797979;
+}
+.author{
+    position: absolute;
+    top: 10px;
+    left: 15px;
+    font-size: 14px;
+}
+header strong{
+    font-size: 28px;
+    font-weight: 800;
+    font-style: italic;
+}
+
+
+
+
+main{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px 0 20px 0;
+}
+
+.teminal_button{
+    border: solid 1px rgb(122, 122, 122);
+    border-radius: 5px;
+    background: blue;
+    color: white;
+    padding: 8px 20px 8px 20px;
+    font-size: 16px;
+    font-weight: 600;
+    margin-top: 25px;
+}
+
+.terminal_input_label{
+    background: transparent;
+    outline: none !important;
+    color: #797979;
+    width: 30%;
+    font-size: 16px;
+    font-weight: 400;
+    padding: 0px 5px 3px 5px;
+    border-radius: 10px;
+    border: solid 2px rgba(100, 100, 100, 50);
+    display: inline-block;
+}
+
+.terminal_input_label p{
+    font-size: 12px;
+    font-weight: 400;
+    -moz-user-select: none;
+    -khtml-user-select: none;
+    -webkit-user-select: none;
+    user-select: none;
+}
+
+.terminal_input{
+    background: transparent;
+    outline: none !important;
+    border: none;
+    width: 100%;
+    font-size: 16px;
+}
+
+.banknote{
+    width: 25%;
+    margin: 10px 5px 0 0;
+}
+
+.terminal_output{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.terminal_output h2{
+    margin: 10px 0 10px 0;
+}
+
+#sadSmile{
+    width: 40%;
+}
