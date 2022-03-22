@@ -1,12 +1,4 @@
 const amount_input = document.querySelector('.terminal_input');
-const banknotesBlocks = {
-    5000: '<img class="banknote" src="./assets/5000.jpg" alt="5000">',
-    2000: '<img class="banknote" src="./assets/2000.jpg" alt="2000">',
-    1000: '<img class="banknote" src="./assets/1000.jpg" alt="1000">',
-    500: '<img class="banknote" src="./assets/500.jpg" alt="500">',
-    200: '<img class="banknote" src="./assets/200.jpg" alt="200">',
-    100: '<img class="banknote" src="./assets/100.jpg" alt="100">'
-}
 
 amount_input.oninput = function () {
     amount_input.value = amount_input.value.replace(/[^0-9]/g, "");
@@ -31,7 +23,7 @@ function redering(banknotes) {
         array.forEach(element => {
             for (let i = 0; i < element.count; i++) {
                 banknotesDiv.style.flexDirection = 'row';
-                banknotesDiv.innerHTML += banknotesBlocks[element.price]
+                banknotesDiv.innerHTML += `<img class="banknote" src="./assets/${element.nominal}.jpg" alt="100">`
             }
         });
 
@@ -49,13 +41,13 @@ function Array_Sort(data) {
     for (let i = 0; i < array.length; i++) {
         const calc = calculate(array[i][1], parseInt(array[i][0], 10), amount)
         amount = calc.amount;
-        result.push({ count: calc.count, price: calc.price })
+        result.push({ count: calc.count, nominal: calc.nominal })
     }
     return (amount === 0 ? result : [])
 }
 
-function calculate(number, price, amount) {
-    let maxNumber = (amount - (amount % price)) / price;
+function calculate(number, nominal, amount) {
+    let maxNumber = (amount - (amount % nominal)) / nominal;
     let count = maxNumber < number ? maxNumber : number;
-    return { count: count, amount: amount - (price * count), price: price }
+    return { count: count, amount: amount - (nominal * count), nominal: nominal }
 }

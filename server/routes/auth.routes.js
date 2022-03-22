@@ -1,10 +1,10 @@
 const Routes = require('express');
 const router = new Routes();
 
-router.get('/get-number-of-banknotes/:id', async (req, res) => {
+router.get('/get-number-of-banknotes/:sum', async (req, res) => {
     try {
         return res.json({
-            amount: req.params.id,
+            amount: req.params.sum,
             banknotes: {
                 5000: 98,
                 2000: 30,
